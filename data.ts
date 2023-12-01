@@ -1,11 +1,30 @@
-
-const data = [
-    { id: 1, name: "Japanese curry", description: "potatoes carrots beef or chicken" },
-    { id: 2, name: "Italiana pizza", description: "cheese tomato sauce beef chicken curry option" },
-    { id: 3, name: "Burger", description: "beef bun lettuce tomato ketchup" },
-    { id: 4, name: "Ramen", description: "Japanese ramen pork vegetables" },
-    { id: 5, name: "Dim Sum", description: "Chinese dim sum pork" },
-    { id: 6, name: "Chinese Hot Dogs", description: "Chinese pork bread bun" },
-]
-
-export default data;
+export const foods = [
+    {
+        id: 0,
+        name: "Sushi",
+        description: "Sushi is a traditional Japanese dish."
+    },
+    {
+        id: 1,
+        name: "Dal",
+        description:
+            "Dal contains onions, tomatoes and various spices which may be added"
+    },
+    {
+        id: 2,
+        name: "Pierogi",
+        description:
+            "Pierogi involve wrapping dough around a savoury or sweet filling"
+    },
+    {
+        id: 3,
+        name: "Kebab",
+        description: "Kebab is a popular meal of skewered meat."
+    },
+    {
+        id: 4,
+        name: "Dim sum",
+        description:
+            "Dim sum is a variety of smaller dishes that can be enjoyed both during lunch or dinner"
+    }
+];
