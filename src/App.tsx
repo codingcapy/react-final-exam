@@ -1,4 +1,11 @@
-import { ReactEventHandler, useState } from 'react'
+/**
+ Author: Paul Kim
+ Date: November 30, 2023
+ Version: 1.0
+ Description: COMP 3013 Final Exam
+ */
+
+import { useState } from 'react'
 import { foods } from "../data"
 import './App.css'
 import React from "react"
