@@ -16,8 +16,10 @@ function App() {
           content !== ""
             ?
             dish.name.toLowerCase().includes(content.toLowerCase())
-              ? <div><FoodTitle key={dish.id} value={dish.name} higlight={content} className='foodArea' />
-                <FoodDescription key={dish.id + 1} value={dish.description} higlight={content} className='foodArea' /></div>
+              ? <div key={dish.id} className='foodArea'>
+                <p><strong>{getHighlightedText(dish.name, content)}</strong></p>
+                <p className='description'>{getHighlightedText(dish.description, content)}</p>
+              </div>
               : ""
             : <div key={dish.id} className='foodArea'>
               <p><strong>{dish.name}</strong></p>
@@ -30,16 +32,7 @@ function App() {
   )
 }
 
-const FoodTitle = (props: any) => {
-  return <p>{getHighlightedText(props.value, props.higlight)}</p>;
-};
-
-const FoodDescription = (props: any) => {
-  return <p>{getHighlightedText(props.value, props.higlight)}</p>;
-};
-
 function getHighlightedText(text: any, higlight: any) {
-  // Split text on higlight term, include term itself into parts, ignore case
   var parts = text.split(new RegExp(`(${higlight})`, "gi"));
   return parts.map((part: any, index: any) => (
     <React.Fragment key={index}>
